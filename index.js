@@ -16,7 +16,7 @@ inputEl.addEventListener('keypress', function (e) {
 
 fitBtn.addEventListener('click', fitSearch)
 
-fitBtn.addEventListener('click', dodiSearch)
+dodiBtn.addEventListener('click', dodiSearch)
 
 function redditSearch() {
 	let redsearch = inputEl.value
@@ -49,6 +49,7 @@ function fitSearch() {
 }
 
 function dodiSearch() {
+	// console.log("dodiSearch")
 	let url = "https://dodi-repacks.site/?s=" + inputEl.value
 	url = url.replace(/\s/g, "+")
 	// console.log(url)
