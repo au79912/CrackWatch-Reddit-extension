@@ -1,0 +1,38 @@
+body {
+	min-width: 180px;
+	margin: 0;
+	padding: 10px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#input-el {
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid #000;
+	padding: 2px 5px;
+}
+
+#sred-btn {
+	background-color: rgb(207, 100, 100);
+	padding: 3px 5px;
+	margin: 4px 2px;
+	border: 1px red;
+	border-radius: 6px;
+}
+
+#sfit-btn {
+	background-color: rgb(215, 119, 215);
+	padding: 3px 5px;
+	margin: 4px 2px;
+	border: 1px purple;
+	border-radius: 6px;
+}
+
+#log-btn {
+	background-color: rgb(100, 207, 100);
+	padding: 3px 5px;
+	margin: 4px 2px;
+	border: 1px green;
+	border-radius: 6px;
+}
