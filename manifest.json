@@ -1,10 +1,14 @@
 {
 	"manifest_version": 3,
 	"version": "1.0",
-	"name": "Test Extension",
+	"name": "Crack Watch",
 	"action": {
-		"default_popup": "index.html",
-		"default_icon": "icon.png"
+		"default_popup": "index.html"
+	},
+	"icons": {
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
 	},
 	"permissions": [
 		"tabs"

@@ -29,13 +29,13 @@ function redditSearch() {
 		.then(function (data) {
 			if (data.data.children.length === 0) {
 				// console.log("No results found")
-				p1El.textContent = "No results found 😔"
+				p1El.textContent = "No results found"
 				p2El.innerHTML = `<img src="NaN.png" alt="No results found">`
 			}
 
 			else {
 				// console.log("Results found")
-				p1El.textContent = "Results found 🏴‍☠️☠"
+				p1El.textContent = "Results found"
 				p2El.innerHTML = `<img src="found.png" alt="Results found">`
 			}
 		})
