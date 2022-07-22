@@ -1,10 +1,10 @@
 const crackBtn = document.getElementById('sred-btn')
 const fitBtn = document.getElementById("sfit-btn")
+const dodiBtn = document.getElementById("sdodi-btn")
 const logBtn = document.getElementById("log-btn")
 const inputEl = document.getElementById("input-el")
 const p1El = document.getElementById("p1-el")
 const p2El = document.getElementById("p2-el")
-// let searchItem = ""
 let links = []
 
 crackBtn.addEventListener('click', redditSearch)
@@ -13,6 +13,10 @@ inputEl.addEventListener('keypress', function (e) {
 		redditSearch()
 	}
 })
+
+fitBtn.addEventListener('click', fitSearch)
+
+fitBtn.addEventListener('click', dodiSearch)
 
 function redditSearch() {
 	let redsearch = inputEl.value
@@ -37,10 +41,15 @@ function redditSearch() {
 		})
 }
 
-fitBtn.addEventListener('click', fitSearch)
-
 function fitSearch() {
 	let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
+	url = url.replace(/\s/g, "+")
+	// console.log(url)
+	window.open(url, '_blank').focus()
+}
+
+function dodiSearch() {
+	let url = "https://dodi-repacks.site/?s=" + inputEl.value
 	url = url.replace(/\s/g, "+")
 	// console.log(url)
 	window.open(url, '_blank').focus()

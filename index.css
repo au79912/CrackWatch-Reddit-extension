@@ -31,12 +31,21 @@ body {
 	border-radius: 6px;
 }
 
-#log-btn {
+#sdodi-btn {
 	color: white;
-	background-color: rgb(100, 207, 100);
+	background-color: rgb(3, 196, 29);
 	padding: 3px 5px;
 	margin: 4px 2px;
-	border: 1px green;
+	border: 1px rgb(7, 189, 53);
+	border-radius: 6px;
+}
+
+#log-btn {
+	color: white;
+	background-color: rgb(209, 249, 11);
+	padding: 3px 5px;
+	margin: 4px 2px;
+	border: 1px rgb(11, 249, 249);
 	border-radius: 6px;
 }
 
