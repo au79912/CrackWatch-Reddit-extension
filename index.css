@@ -40,6 +40,16 @@ body {
 	border-radius: 6px;
 }
 
+#p1-el {
+	/* bold center aligned text */
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5em;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
 #p2-el {
 	/* picture to occupy bottom half of the page */
 	width: 120px;
