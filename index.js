@@ -19,6 +19,7 @@ crackBtn.addEventListener('click', function () {
 			else
 			{
 				console.log("Results found")
+				pEl.innerHTML = `<img src="found.png" alt="Results found">`
 			}
 		})
 })
