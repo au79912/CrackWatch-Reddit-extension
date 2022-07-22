@@ -74,3 +74,28 @@ body {
 	margin: auto;
 	margin-top: 10px;
 }
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	overflow: hidden;
+	color: green;
+
+}
+
+ul li {
+	/* float: left; */
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+	color: green;
+}
+
+li a {
+	display: block;
+	color: green;
+	/* text-align: center; */
+	padding: 4px;
+	/* text-decoration: none; */
+}
