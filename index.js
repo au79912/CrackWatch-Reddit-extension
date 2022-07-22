@@ -4,6 +4,8 @@ const logBtn = document.getElementById("log-btn")
 const inputEl = document.getElementById("input-el")
 const p1El = document.getElementById("p1-el")
 const p2El = document.getElementById("p2-el")
+// let searchItem = ""
+let links = []
 
 crackBtn.addEventListener('click', redditSearch)
 inputEl.addEventListener('keypress', function (e) {
@@ -15,6 +17,7 @@ inputEl.addEventListener('keypress', function (e) {
 function redditSearch() {
 	let redsearch = inputEl.value
 	redsearch = redsearch.replace(/\s/g, "+")
+	// searchItem = redsearch
 	fetch(`https://www.reddit.com/r/crackwatch/search.json?q=${redsearch}&restrict_sr=on&sort=relevance&t=all&limit=100`)
 		.then(function (response) {
 			return response.json()
@@ -34,3 +37,11 @@ function redditSearch() {
 		})
 }
 
+fitBtn.addEventListener('click', fitSearch)
+
+function fitSearch() {
+	let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
+	url = url.replace(/\s/g, "+")
+	// console.log(url)
+	window.open(url, '_blank').focus()
+}
