@@ -14,8 +14,16 @@ inputEl.addEventListener('keypress', function (e) {
 		redditSearch()
 	}
 })
-fitBtn.addEventListener('click', fitSearch)
-dodiBtn.addEventListener('click', dodiSearch)
+
+//event listeners for fitbtn on click which calls searchcrack function with fitgirl as argument
+fitBtn.addEventListener('click', function () {
+	searchcrack('fitgirl')
+})
+dodiBtn.addEventListener('click', function() {
+	searchcrack('dodi')
+})
+// fitBtn.addEventListener('click', fitSearch)
+// dodiBtn.addEventListener('click', dodiSearch)
 logBtn.addEventListener('click', renderlinks)
 
 function redditSearch() {
@@ -39,23 +47,22 @@ function redditSearch() {
 				p2El.innerHTML = `<img src="found.png" alt="Results found">`
 			}
 		})
-
-		
 }
 
-function fitSearch() {
-	let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
-	url = url.replace(/\s/g, "+")
-	// console.log(url)
-	window.open(url, '_blank').focus()
-}
+function searchcrack(webhandle) {
+	if(webhandle === "fitgirl") {
+		let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
+		url = url.replace(/\s/g, "+")
+		console.log(url)
+		window.open(url, '_blank').focus()
+	}
 
-function dodiSearch() {
-	// console.log("dodiSearch")
-	let url = "https://dodi-repacks.site/?s=" + inputEl.value
-	url = url.replace(/\s/g, "+")
-	// console.log(url)
-	window.open(url, '_blank').focus()
+	else if(webhandle === "dodi") {
+		let url = "https://dodi-repacks.site/?s=" + inputEl.value
+		url = url.replace(/\s/g, "+")
+		console.log(url)
+		window.open(url, '_blank').focus()
+	}
 }
 
 function renderlinks() {
