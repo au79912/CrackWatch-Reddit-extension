@@ -15,11 +15,10 @@ inputEl.addEventListener('keypress', function (e) {
 	}
 })
 
-//event listeners for fitbtn on click which calls searchcrack function with fitgirl as argument
 fitBtn.addEventListener('click', function () {
 	searchcrack('fitgirl')
 })
-dodiBtn.addEventListener('click', function() {
+dodiBtn.addEventListener('click', function () {
 	searchcrack('dodi')
 })
 // fitBtn.addEventListener('click', fitSearch)
@@ -29,7 +28,10 @@ logBtn.addEventListener('click', renderlinks)
 function redditSearch() {
 	let redsearch = inputEl.value
 	redsearch = redsearch.replace(/\s/g, "+")
-	// searchItem = redsearch
+
+	//add loading animation here
+	p1El.innerHTML = "Searching..."
+
 	fetch(`https://www.reddit.com/r/crackwatch/search.json?q=${redsearch}&restrict_sr=on&sort=relevance&t=all&limit=100`)
 		.then(function (response) {
 			return response.json()
@@ -50,14 +52,14 @@ function redditSearch() {
 }
 
 function searchcrack(webhandle) {
-	if(webhandle === "fitgirl") {
+	if (webhandle === "fitgirl") {
 		let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
 		url = url.replace(/\s/g, "+")
 		console.log(url)
 		window.open(url, '_blank').focus()
 	}
 
-	else if(webhandle === "dodi") {
+	else if (webhandle === "dodi") {
 		let url = "https://dodi-repacks.site/?s=" + inputEl.value
 		url = url.replace(/\s/g, "+")
 		console.log(url)
@@ -68,7 +70,6 @@ function searchcrack(webhandle) {
 function renderlinks() {
 	let name = inputEl.value
 	name = name.replace(/\s/g, "+")
-	let link = `https://www.reddit.com/r/CrackWatch/search/?q=${name}%2020&restrict_sr=1&sr_nsfw=`
-	// print the link in logEl and open it in a new tab
+	let link = `https://www.reddit.com/r/CrackWatch/search/?q=${name}&restrict_sr=1&sr_nsfw=`
 	logEl.innerHTML = `<a target="_blank" href="${link}">${link}</a>`
 }
