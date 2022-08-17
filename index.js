@@ -54,17 +54,20 @@ function redditSearch() {
 function searchcrack(webhandle) {
 	if (webhandle === "fitgirl") {
 		let url = "https://fitgirl-repacks.site/?s=" + inputEl.value
-		url = url.replace(/\s/g, "+")
-		console.log(url)
-		window.open(url, '_blank').focus()
+		render(url)
 	}
 
 	else if (webhandle === "dodi") {
 		let url = "https://dodi-repacks.site/?s=" + inputEl.value
-		url = url.replace(/\s/g, "+")
-		console.log(url)
-		window.open(url, '_blank').focus()
+		render(url)
 	}
+}
+
+function render(url)
+{
+	url = url.replace(/\s/g, "+")
+	console.log(url)
+	window.open(url, '_blank').focus()
 }
 
 function renderlinks() {
