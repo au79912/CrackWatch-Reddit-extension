@@ -63,8 +63,7 @@ function searchcrack(webhandle) {
 	}
 }
 
-function render(url)
-{
+function render(url) {
 	url = url.replace(/\s/g, "+")
 	console.log(url)
 	window.open(url, '_blank').focus()
